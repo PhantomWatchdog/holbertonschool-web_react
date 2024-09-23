@@ -10,6 +10,9 @@ var Teacher = /** @class */ (function () {
     Teacher.prototype.workTeacherTasks = function () {
         return 'Getting to work';
     };
+    Teacher.prototype.toString = function () {
+        return 'Teacher';
+    };
     return Teacher;
 }());
 var Director = /** @class */ (function () {
@@ -23,6 +26,9 @@ var Director = /** @class */ (function () {
     };
     Director.prototype.workDirectorTasks = function () {
         return 'Getting to director tasks';
+    };
+    Director.prototype.toString = function () {
+        return 'Director';
     };
     return Director;
 }());
@@ -49,6 +55,6 @@ var director = new Director();
 var teacher = new Teacher();
 console.log(executeWork(createEmployee(200))); // Output: Getting to director tasks
 console.log(executeWork(createEmployee(1000)));
-console.log(createEmployee(200)); // Output: Teacher
-console.log(createEmployee(1000)); // Output: Director
-console.log(createEmployee('$1000')); // Output: Director
+console.log(createEmployee(200).toString()); // Output: Teacher
+console.log(createEmployee(1000).toString()); // Output: Director
+console.log(createEmployee('$1000').toString()); // Output: Director

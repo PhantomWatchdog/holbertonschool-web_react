@@ -22,6 +22,10 @@ class Teacher {
     workTeacherTasks(): string {
         return 'Getting to work';
     }
+
+    toString(): string {
+        return 'Teacher';
+    }
 }
 
 class Director {
@@ -35,6 +39,10 @@ class Director {
 
     workDirectorTasks(): string {
         return 'Getting to director tasks';
+    }
+
+    toString(): string {
+        return 'Director';
     }
 }
 
@@ -64,6 +72,6 @@ const teacher = new Teacher();
 console.log(executeWork(createEmployee(200))); // Output: Getting to director tasks
 console.log(executeWork(createEmployee(1000)));
 
-console.log(createEmployee(200)); // Output: Teacher
-console.log(createEmployee(1000)); // Output: Director
-console.log(createEmployee('$1000')); // Output: Director
+console.log(createEmployee(200).toString()); // Output: Teacher
+console.log(createEmployee(1000).toString()); // Output: Director
+console.log(createEmployee('$1000').toString()); // Output: Director
