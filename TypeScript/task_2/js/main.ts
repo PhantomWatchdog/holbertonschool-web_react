@@ -66,6 +66,14 @@ function executeWork(employee: DirectorInterface | TeacherInterface): string {
     }
 }
 
+function teachClass(todayClass: string): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else {
+        return 'Teaching History';
+    }
+}
+
 const director = new Director();
 const teacher = new Teacher();
 
@@ -75,3 +83,6 @@ console.log(executeWork(createEmployee(1000)));
 console.log(createEmployee(200).toString()); // Output: Teacher
 console.log(createEmployee(1000).toString()); // Output: Director
 console.log(createEmployee('$1000').toString()); // Output: Director
+
+console.log(teachClass('Math')); // Output: Teaching Math
+console.log(teachClass('History')); // Output: Teaching History
