@@ -4,6 +4,14 @@ var teacher1 = {
     fullTimeEmployee: true,
     yearsOfExperience: 12,
     location: 'New York',
-    contract: false
+    contract: false // Additional property
 };
-console.log(teacher1);
+var director1 = {
+    firstName: 'Julia',
+    lastName: 'Elray',
+    fullTimeEmployee: true,
+    yearsOfExperience: 18,
+    location: 'New York',
+    numberOfReports: 4
+};
+console.log(director1);
