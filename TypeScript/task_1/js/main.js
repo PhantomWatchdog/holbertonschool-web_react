@@ -33,5 +33,6 @@ var printTeacher = function (firstName, lastName) {
     return "".concat(firstName.charAt(0), ".").concat(lastName);
 };
 console.log(studentOne.displayName()); // Output: John
+console.log(studentOne.workOnHomework()); // Output: Currently working
 console.log(director1);
 console.log(printTeacher(teacher1.firstName, teacher1.lastName));
