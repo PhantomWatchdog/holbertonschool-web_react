@@ -4,7 +4,7 @@ interface Teacher {
     fullTimeEmployee: boolean;
     yearsOfExperience: number;
     location: string;
-    [key: string]: any;
+    [key: string]: any; // Index signature to allow additional properties
 }
 const teacher1: Teacher = {
     firstName: 'John',
@@ -12,7 +12,7 @@ const teacher1: Teacher = {
     fullTimeEmployee: true,
     yearsOfExperience: 12,
     location: 'New York',
-    contract: false
+    contract: false // Additional property
 };
 
 console.log(teacher1);
