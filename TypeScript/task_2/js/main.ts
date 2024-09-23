@@ -38,13 +38,31 @@ class Director {
     }
 }
 
-function createEmployee(salary: number | string): string {
+function createEmployee(salary: number | string): Teacher | Director {
     if (typeof salary === 'number' && salary < 500) {
-        return 'Teacher';
+        return new Teacher();
     } else {
-        return 'Director';
+        return new Director();
     }
 }
+
+function isDirector(employee: DirectorInterface | TeacherInterface): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+}
+
+function executeWork(employee: DirectorInterface | TeacherInterface): string {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    } else {
+        return employee.workTeacherTasks();
+    }
+}
+
+const director = new Director();
+const teacher = new Teacher();
+
+console.log(executeWork(createEmployee(200))); // Output: Getting to director tasks
+console.log(executeWork(createEmployee(1000)));
 
 console.log(createEmployee(200)); // Output: Teacher
 console.log(createEmployee(1000)); // Output: Director
